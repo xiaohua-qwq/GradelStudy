@@ -11,6 +11,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/subproject01" />
+            <option value="$PROJECT_DIR$/subproject02" />
           </set>
         </option>
       </GradleProjectSettings>
