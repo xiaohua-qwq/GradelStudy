@@ -44,3 +44,37 @@ test {
     // include('com/xxx/**') 只执行某个包下的测试类
     // exclude('com/xxx/**') 排除某个包下的测试类
 }
+
+def map = new HashMap<String, Object>();
+map.put("action", { println("执行Map中的任务") })
+
+task(map, "task1", {
+    //任务的配置段: 在配置阶段执行
+    println "这是最简单的任务"
+    //任务的行为: 在项目的执行阶段执行
+    doFirst {
+        println("task1 do first")
+    }
+    doLast {
+        println("task1 do last")
+    }
+})
+
+task("taskA", {
+    doLast {
+        println("任务A执行了")
+    }
+})
+
+task("taskB", {
+    doLast {
+        println("任务B执行了")
+    }
+})
+
+task("taskC") {
+    dependsOn = ['taskA', 'taskB']
+    doLast {
+        println("任务C执行了")
+    }
+}
