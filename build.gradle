@@ -1,10 +1,13 @@
 plugins {
     id 'java'
     id 'war'
+    id 'application'
 }
 
 group = 'com.atguigu'
 version = '1.0-SNAPSHOT'
+
+mainClassName = 'com.atguigu.app.Application'
 
 repositories {
     mavenCentral()
@@ -61,6 +64,7 @@ task(map, "task1", {
 })
 
 task("taskA", {
+    group "abc"
     doLast {
         println("任务A执行了")
     }
