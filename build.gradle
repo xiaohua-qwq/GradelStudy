@@ -82,3 +82,12 @@ task("taskC") {
         println("任务C执行了")
     }
 }
+
+//本地文件的操作方式(相对路径)
+File testFile = file('src/conf.xml')
+testFile.createNewFile()
+
+ConfigurableFileTree configurableFileTree = fileTree('src/main')
+configurableFileTree.include("**/*.java").forEach {item->{
+    println item.name
+}}
