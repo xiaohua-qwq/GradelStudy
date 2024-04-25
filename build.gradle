@@ -1,4 +1,5 @@
 plugins {
+    id 'java-library'
     id 'java'
     id 'war'
     id 'application'
@@ -14,6 +15,7 @@ repositories {
 }
 
 dependencies {
+    api project(':subproject01')
     implementation 'org.springframework:spring-beans:4.1.7.RELEASE'
     implementation 'org.springframework:spring-web:4.1.7.RELEASE'
     implementation 'org.springframework:spring-webmvc:4.1.7.RELEASE'
