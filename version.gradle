@@ -1,0 +1,7 @@
+ext {
+    peopleName = "小明"
+    hobby =
+            [
+                    swim: "游泳"
+            ]
+}

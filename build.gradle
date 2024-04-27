@@ -37,6 +37,9 @@ dependencies {
     implementation 'log4j:log4j:1.2.17'
     implementation 'org.slf4j:slf4j-api:1.7.25'
     implementation 'jstl:jstl:1.2'
+    //版本号为+时 则采用最新版本
+    implementation 'log4j:log4j:+'
+
     compileOnly 'javax.servlet:servlet-api:2.5'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
@@ -93,3 +96,8 @@ ConfigurableFileTree configurableFileTree = fileTree('src/main')
 configurableFileTree.include("**/*.java").forEach {item->{
     println item.name
 }}
+
+apply from :"version.gradle"
+tasks.register('pluginTestTask') {
+    println "姓名 ${peopleName} 爱好 ${hobby.swim}"
+}
