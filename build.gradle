@@ -1,3 +1,12 @@
+buildscript {
+    repositories { maven { url "$rootDir/lib/release" }
+    }
+    dependencies {
+        classpath "com.atguigu.plugin:library:1.1" }
+}
+
+// apply plugin: '插件id 在resources/META-INF/gradle-plugins/下定义的配置文件名 就是插件id'
+
 plugins {
     id 'java-library'
     id 'java'
