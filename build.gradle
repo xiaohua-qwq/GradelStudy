@@ -14,6 +14,25 @@ plugins {
     id 'application'
 }
 
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/xiaohuadev/java']
+        }
+        resources {
+            srcDirs = ['src/xiaohuadev/resources']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/Test/java']
+        }
+        resources {
+            srcDirs = ['src/Test/resources']
+        }
+    }
+}
+
 group = 'com.atguigu'
 version = '1.0-SNAPSHOT'
 
