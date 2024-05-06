@@ -1,4 +1,4 @@
-package com.atguigu.app;
+package org.xiaohuadev.app;
 
 public class Application {
     public static void main(String[] args) {

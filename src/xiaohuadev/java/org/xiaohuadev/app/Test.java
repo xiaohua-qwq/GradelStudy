@@ -1,4 +1,4 @@
-package com.atguigu.app;
+package org.xiaohuadev.app;
 
 
 public class Test {

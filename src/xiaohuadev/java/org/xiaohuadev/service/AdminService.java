@@ -1,7 +1,7 @@
-package com.atguigu.service;
+package org.xiaohuadev.service;
 
-import com.atguigu.bean.Admin;
-import com.atguigu.dao.AdminMapper;
+import org.xiaohuadev.bean.Admin;
+import org.xiaohuadev.dao.AdminMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

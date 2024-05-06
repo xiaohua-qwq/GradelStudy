@@ -1,4 +1,4 @@
-package com.atguigu.bean;
+package org.xiaohuadev.bean;
 
 public class Admin {
     private Integer id;

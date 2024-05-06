@@ -129,3 +129,15 @@ apply from :"version.gradle"
 tasks.register('pluginTestTask') {
     println "姓名 ${peopleName} 爱好 ${hobby.swim}"
 }
+
+subprojects {
+    tasks.create('testTask'){
+        println "子工程名为: $project.name"
+    }
+}
+
+allprojects {
+    tasks.create('testTaskAll'){
+        println "全部工程名为: $project.name"
+    }
+}

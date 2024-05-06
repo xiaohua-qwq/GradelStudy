@@ -1,6 +1,6 @@
-package com.atguigu.dao;
+package org.xiaohuadev.dao;
 
-import com.atguigu.bean.Admin;
+import org.xiaohuadev.bean.Admin;
 
 import java.util.List;
 
