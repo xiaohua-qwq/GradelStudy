@@ -141,3 +141,20 @@ allprojects {
         println "全部工程名为: $project.name"
     }
 }
+
+ext.age=18
+ext {
+    phont=18988888888
+    address="北京市"
+}
+tasks.register("extCustomProperty") {
+    ext {
+        desc="你好世界"
+    }
+    doLast {
+        println "年龄是 ${age}"
+        println "年龄是 ${phont}"
+        println "年龄是 ${address}"
+        println "年龄是 ${desc}"
+    }
+}
