@@ -1,3 +1,10 @@
+buildscript {
+    repositories { maven { url 'https://maven.aliyun.com/repository/public' }
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.4.1' }
+}
+
 plugins {
     id 'java'
     id 'org.springframework.boot' version '2.7.4'
@@ -5,6 +12,10 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     //进行依赖管理,在引入其它boot依赖时省略版本号、解决jar包冲突问题
 }
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
 group = 'org.xiaohuadev'
 version = '1.0-SNAPSHOT'
